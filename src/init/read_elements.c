@@ -6,11 +6,11 @@
 /*   By: simon <svan-hoo@student.codam.nl>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/02/02 16:58:42 by svan-hoo      #+#    #+#                 */
-/*   Updated: 2025/04/21 22:46:14 by simon         ########   odam.nl         */
+/*   Updated: 2025/07/28 13:47:34 by simon         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "gimma.h"
 
 static int
 	load_tile_texture(

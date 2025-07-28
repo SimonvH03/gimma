@@ -6,11 +6,11 @@
 /*   By: simon <svan-hoo@student.codam.nl>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/02/09 19:05:56 by svan-hoo      #+#    #+#                 */
-/*   Updated: 2025/04/22 02:03:49 by simon         ########   odam.nl         */
+/*   Updated: 2025/07/28 13:47:34 by simon         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "gimma.h"
 
 // looks up the sin and cosin values based on which of the 8 directions
 //	(9 if you count 0, 0) the player can move

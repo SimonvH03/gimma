@@ -6,11 +6,11 @@
 /*   By: simon <svan-hoo@student.codam.nl>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/04/19 00:40:10 by simon         #+#    #+#                 */
-/*   Updated: 2025/04/21 21:57:10 by simon         ########   odam.nl         */
+/*   Updated: 2025/07/28 13:47:34 by simon         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "gimma.h"
 
 void
 	set_menu_ability(

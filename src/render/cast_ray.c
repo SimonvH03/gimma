@@ -6,11 +6,11 @@
 /*   By: simon <svan-hoo@student.codam.nl>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/02/24 02:16:25 by simon         #+#    #+#                 */
-/*   Updated: 2025/04/19 22:58:01 by simon         ########   odam.nl         */
+/*   Updated: 2025/07/28 13:47:34 by simon         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "gimma.h"
 
 static int16_t
 	see_through(

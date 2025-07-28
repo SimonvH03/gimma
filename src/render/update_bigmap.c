@@ -6,11 +6,11 @@
 /*   By: simon <svan-hoo@student.codam.nl>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/08/27 01:36:33 by simon         #+#    #+#                 */
-/*   Updated: 2025/04/19 00:37:51 by simon         ########   odam.nl         */
+/*   Updated: 2025/07/28 13:47:34 by simon         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "gimma.h"
 
 static void
 	sample_player(

@@ -6,13 +6,13 @@
 /*   By: simon <svan-hoo@student.codam.nl>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/01/31 18:33:20 by svan-hoo      #+#    #+#                 */
-/*   Updated: 2025/05/12 18:09:31 by svan-hoo      ########   odam.nl         */
+/*   Updated: 2025/07/28 13:47:34 by simon         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "gimma.h"
 
-static void	cub3d_terminate(t_window *window)
+static void	gimma_terminate(t_window *window)
 {
 	mlx_terminate(window->mlx);
 	mlx_destroy_cursor(window->cursor);
@@ -55,7 +55,7 @@ int	main(int argc, char **argv)
 		link_loop_hooks(&window);
 		mlx_loop(window.mlx);
 	}
-	cub3d_terminate(&window);
+	gimma_terminate(&window);
 	if (mlx_errno || g_cub_errno)
 		print_error();
 	return (mlx_errno || g_cub_errno);

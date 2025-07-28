@@ -6,12 +6,12 @@
 /*   By: simon <svan-hoo@student.codam.nl>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/08/26 23:06:35 by simon         #+#    #+#                 */
-/*   Updated: 2025/04/23 17:55:50 by simon         ########   odam.nl         */
+/*   Updated: 2025/07/28 13:47:57 by simon         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CUB3D_H
-# define CUB3D_H
+#ifndef GIMMA_H
+# define GIMMA_H
 # include <unistd.h>
 # include <errno.h>
 # include <string.h>
@@ -29,17 +29,13 @@
 # include "render.h"
 
 // mlx window configuration
-# define WINDOW_TITLE		"cub3d"
+# define WINDOW_TITLE		"gimma"
 # define WINDOW_WIDTH		1280
 # define WINDOW_HEIGHT		720
 # define FULLSCREEN			false
 # define MONITOR_ID			0
 
-# ifdef BONUS
-#  define VALID_MAP_CHAR	"01NESW dD"
-# else
-#  define VALID_MAP_CHAR	"01NESW "
-# endif
+# define VALID_MAP_CHAR	"01NESW dD"
 
 enum	e_window_view
 {

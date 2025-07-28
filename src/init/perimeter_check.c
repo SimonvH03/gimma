@@ -3,14 +3,14 @@
 /*                                                        ::::::::            */
 /*   perimeter_check.c                                  :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: svan-hoo <svan-hoo@student.codam.nl>         +#+                     */
+/*   By: simon <svan-hoo@student.codam.nl>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/04/15 20:50:32 by svan-hoo      #+#    #+#                 */
-/*   Updated: 2025/05/12 18:28:32 by svan-hoo      ########   odam.nl         */
+/*   Updated: 2025/07/28 13:47:34 by simon         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "gimma.h"
 
 static bool
 	visited(int16_t cell)

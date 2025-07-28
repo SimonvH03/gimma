@@ -3,14 +3,14 @@
 /*                                                        ::::::::            */
 /*   allocation_list.c                                  :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: svan-hoo <svan-hoo@student.codam.nl>         +#+                     */
+/*   By: simon <svan-hoo@student.codam.nl>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/02/23 18:51:01 by svan-hoo      #+#    #+#                 */
-/*   Updated: 2025/04/17 00:13:29 by simon         ########   odam.nl         */
+/*   Updated: 2025/07/28 13:47:34 by simon         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "gimma.h"
 
 int	add_to_texture_list(t_window *window, mlx_texture_t *texture_ptr)
 {

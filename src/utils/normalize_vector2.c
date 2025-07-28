@@ -3,14 +3,14 @@
 /*                                                        ::::::::            */
 /*   normalize_vector2.c                                :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: svan-hoo <svan-hoo@student.codam.nl>         +#+                     */
+/*   By: simon <svan-hoo@student.codam.nl>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/02/23 18:51:01 by svan-hoo      #+#    #+#                 */
-/*   Updated: 2025/04/16 15:24:22 by simon         ########   odam.nl         */
+/*   Updated: 2025/07/28 13:47:34 by simon         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "gimma.h"
 
 static float
 	quake3_heavilyinspired_rsqrt(
