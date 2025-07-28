@@ -6,7 +6,7 @@
 /*   By: simon <svan-hoo@student.codam.nl>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/08/26 23:06:35 by simon         #+#    #+#                 */
-/*   Updated: 2025/07/28 18:11:51 by simon         ########   odam.nl         */
+/*   Updated: 2025/07/28 19:32:31 by simon         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ typedef struct s_scalable
 # define INTERACTION_RANGE	1.5
 
 // environment
-# define VIEW_DISTANCE		16
+# define VIEW_DISTANCE		12
 
 enum	e_door_state
 {

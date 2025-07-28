@@ -6,7 +6,7 @@
 /*   By: simon <svan-hoo@student.codam.nl>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/02/22 19:48:30 by simon         #+#    #+#                 */
-/*   Updated: 2025/07/28 13:47:34 by simon         ########   odam.nl         */
+/*   Updated: 2025/07/28 19:53:13 by simon         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static int
 	if (add_to_texture_list(window, background->texture) != RETURN_SUCCESS)
 		return (RETURN_FAILURE);
 	background->scale = 1;
-	background->scale = ft_max_float(
+	background->scale = ft_maxf(
 			1.0 * mlx->width / background->texture->width,
 			1.0 * mlx->height / background->texture->height);
 	return (RETURN_SUCCESS);
@@ -47,7 +47,7 @@ static int
 	if (add_to_texture_list(window, button->texture) != RETURN_SUCCESS)
 		return (RETURN_FAILURE);
 	button->scale = 1;
-	button->scale = ft_min_float(
+	button->scale = ft_minf(
 			1.0 * (mlx->width / 3) / button->texture->width,
 			1.0 * (mlx->height / 10) / button->texture->height);
 	return (RETURN_SUCCESS);

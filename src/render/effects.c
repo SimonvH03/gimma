@@ -6,7 +6,7 @@
 /*   By: simon <svan-hoo@student.codam.nl>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/07/28 14:58:21 by simon         #+#    #+#                 */
-/*   Updated: 2025/07/28 18:11:25 by simon         ########   odam.nl         */
+/*   Updated: 2025/07/28 19:53:27 by simon         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,21 @@ uint32_t
 	colour_blend(
 		uint32_t colour_a,
 		uint32_t colour_b,
-		uint8_t level)
+		float level)
 {
 	t_colour_construct	a;
 	t_colour_construct	b;
 	t_colour_construct	result;
-	uint8_t				inverse;
+	float				inverse;
 
-	inverse = 255 - level;
+	level = ft_clampf(level, 0, 1);
+	inverse = 1 - level;
 	a.value = colour_a;
 	b.value = colour_b;
-	result.r = (a.r * inverse + b.r * level) / 255;
-	result.g = (a.g * inverse + b.g * level) / 255;
-	result.b = (a.b * inverse + b.b * level) / 255;
-	result.a = (a.a * inverse + b.a * level) / 255;
+	result.r = (a.r * inverse + b.r * level);
+	result.g = (a.g * inverse + b.g * level);
+	result.b = (a.b * inverse + b.b * level);
+	result.a = (a.a * inverse + b.a * level);
 	return (result.value);
 }
 

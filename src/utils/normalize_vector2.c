@@ -6,7 +6,7 @@
 /*   By: simon <svan-hoo@student.codam.nl>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/02/23 18:51:01 by svan-hoo      #+#    #+#                 */
-/*   Updated: 2025/07/28 13:47:34 by simon         ########   odam.nl         */
+/*   Updated: 2025/07/28 19:52:53 by simon         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,6 @@ void	normalize_vector2(float *x_component, float *y_component)
 	const double	inverse_sqrt
 		= quake3_heavilyinspired_rsqrt((dx * dx) + (dy * dy));
 
-	*x_component *= ft_abs_float(inverse_sqrt);
-	*y_component *= ft_abs_float(inverse_sqrt);
+	*x_component *= ft_absf(inverse_sqrt);
+	*y_component *= ft_absf(inverse_sqrt);
 }

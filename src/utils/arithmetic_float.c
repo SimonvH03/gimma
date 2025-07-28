@@ -6,7 +6,7 @@
 /*   By: simon <svan-hoo@student.codam.nl>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/02/23 18:51:01 by svan-hoo      #+#    #+#                 */
-/*   Updated: 2025/07/28 13:47:34 by simon         ########   odam.nl         */
+/*   Updated: 2025/07/28 19:53:27 by simon         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ float	nearest_power_of_2(float value)
 }
 
 // return absolute value
-float	ft_abs_float(float value)
+float	ft_absf(float value)
 {
 	if (value < 0)
 		return (-value);
@@ -28,7 +28,7 @@ float	ft_abs_float(float value)
 }
 
 // return highest value
-float	ft_max_float(float a, float b)
+float	ft_maxf(float a, float b)
 {
 	if (a < b)
 		return (b);
@@ -37,7 +37,7 @@ float	ft_max_float(float a, float b)
 }
 
 // return lowest value
-float	ft_min_float(float a, float b)
+float	ft_minf(float a, float b)
 {
 	if (a < b)
 		return (a);
@@ -46,11 +46,25 @@ float	ft_min_float(float a, float b)
 }
 
 // return polarity of value
-short	ft_sign_float(float value)
+short	ft_signf(float value)
 {
 	if (value < 0)
 		return (-1);
 	if (value > 0)
 		return (1);
 	return (0);
+}
+
+float	ft_clampf(float value, float lower_bound, float upper_bound)
+{
+	if (value < lower_bound)
+		return (lower_bound);
+	if (value > upper_bound)
+		return (upper_bound);
+	return (value);
+}
+
+float	ft_squaref(float value)
+{
+	return (value * value);
 }

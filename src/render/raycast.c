@@ -6,7 +6,7 @@
 /*   By: simon <svan-hoo@student.codam.nl>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/02/24 02:16:25 by simon         #+#    #+#                 */
-/*   Updated: 2025/07/28 18:10:41 by simon         ########   odam.nl         */
+/*   Updated: 2025/07/28 19:54:51 by simon         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ static void
 		x = 0;
 		while (x < image->width)
 			((uint32_t *)image->pixels)[x++ + y * image->width]
-				= scene->ceiling_clr;
+				= colour_blend(scene->ceiling_clr, 0xFF000000,
+				ft_squaref((y + camera->height_offset) / (float)image->height));
 		y++;
 	}
 	while (y < image->height)
@@ -36,7 +37,9 @@ static void
 		x = 0;
 		while (x < image->width)
 			((uint32_t *)image->pixels)[x++ + y * image->width]
-				= scene->floor_clr;
+				= colour_blend(scene->floor_clr, 0xFF000000,
+				ft_squaref(1 - (y + camera->height_offset - image->height)
+				/ (float)image->height));
 		y++;
 	}
 }
@@ -50,14 +53,14 @@ static void
 	ray->pos_y = (int)camera->pos_y;
 	ray->dir_x = camera->dir_x + camera->plane_x * ray->camera_x;
 	ray->dir_y = camera->dir_y + camera->plane_y * ray->camera_x;
-	ray->step_x = ft_abs_float(1 / ray->dir_x);
+	ray->step_x = ft_absf(1 / ray->dir_x);
 	if (ray->step_x == INFINITY)
 		ray->step_x = (float)UINT32_MAX;
-	ray->step_y = ft_abs_float(1 / ray->dir_y);
+	ray->step_y = ft_absf(1 / ray->dir_y);
 	if (ray->step_y == INFINITY)
 		ray->step_y = (float)UINT32_MAX;
-	ray->sign_x = ft_sign_float(ray->dir_x);
-	ray->sign_y = ft_sign_float(ray->dir_y);
+	ray->sign_x = ft_signf(ray->dir_x);
+	ray->sign_y = ft_signf(ray->dir_y);
 	if (ray->sign_x > 0)
 		ray->total_x = ((ray->pos_x + 1 - camera->pos_x) * ray->step_x);
 	else

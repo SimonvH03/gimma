@@ -6,7 +6,7 @@
 /*   By: simon <svan-hoo@student.codam.nl>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/02/09 19:05:56 by svan-hoo      #+#    #+#                 */
-/*   Updated: 2025/07/28 13:47:34 by simon         ########   odam.nl         */
+/*   Updated: 2025/07/28 19:53:21 by simon         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ static void
 	cos_sin[1] = camera->movement_matrix[1 + forward_backward][1 + left_right];
 	move_dir_x = camera->dir_x * cos_sin[0] + camera->dir_y * -cos_sin[1];
 	move_dir_y = camera->dir_x * cos_sin[1] + camera->dir_y * cos_sin[0];
-	hitbox_x = COLLISION_HITBOX * ft_sign_float(move_dir_x);
-	hitbox_y = COLLISION_HITBOX * ft_sign_float(move_dir_y);
+	hitbox_x = COLLISION_HITBOX * ft_signf(move_dir_x);
+	hitbox_y = COLLISION_HITBOX * ft_signf(move_dir_y);
 	if (is_solid(tilemap[(int)camera->pos_y][(int)(camera->pos_x + hitbox_x
 			+ move_dir_x * camera->movement_speed)]))
 		move_dir_x = (int)camera->pos_x - camera->pos_x + (move_dir_x > 0)

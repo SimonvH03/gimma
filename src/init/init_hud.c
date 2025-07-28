@@ -6,7 +6,7 @@
 /*   By: simon <svan-hoo@student.codam.nl>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/02/22 19:48:30 by simon         #+#    #+#                 */
-/*   Updated: 2025/07/28 13:47:34 by simon         ########   odam.nl         */
+/*   Updated: 2025/07/28 19:53:13 by simon         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static int
 	minimap->player.texture = hud->player;
 	minimap->r_camera = &window->player.camera;
 	minimap->r_grid = &window->scene.grid;
-	minimap->side = ft_min_float(mlx->height, mlx->width) / 3;
+	minimap->side = ft_minf(mlx->height, mlx->width) / 3;
 	minimap->block_size = (minimap->side / MINIMAP_SCALE)
 		* (mlx->width / (float)mlx->height);
 	minimap->radius = minimap->side / 2;
@@ -39,7 +39,7 @@ static int
 	bigmap->player_icon_src.texture = hud->player;
 	bigmap->r_camera = &window->player.camera;
 	bigmap->r_grid = &window->scene.grid;
-	bigmap->block_size = ft_min_float(
+	bigmap->block_size = ft_minf(
 			mlx->height / (window->scene.grid.y_max + 2),
 			mlx->width / (window->scene.grid.x_max + 2));
 	bigmap->x_offset = mlx->width

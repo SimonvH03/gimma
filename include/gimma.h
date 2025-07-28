@@ -6,7 +6,7 @@
 /*   By: simon <svan-hoo@student.codam.nl>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/08/26 23:06:35 by simon         #+#    #+#                 */
-/*   Updated: 2025/07/28 18:11:00 by simon         ########   odam.nl         */
+/*   Updated: 2025/07/28 19:54:03 by simon         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -316,7 +316,7 @@ uint32_t
 	colour_blend(
 		uint32_t colour_a,
 		uint32_t colour_b,
-		uint8_t level);
+		float level);
 
 // setters getters of mlx_image_t.enabled bits
 // groups
@@ -360,18 +360,26 @@ float
 	nearest_power_of_2(
 		float value);
 float		
-	ft_abs_float(
+	ft_absf(
 		float value);
 float		
-	ft_max_float(
+	ft_maxf(
 		float a,
 		float b);
 float		
-	ft_min_float(
+	ft_minf(
 		float a,
 		float b);
 short		
-	ft_sign_float(
+	ft_signf(
+		float value);
+float		
+	ft_clampf(
+		float value,
+		float lower_bound,
+		float upper_bound);
+float		
+	ft_squaref(
 		float value);
 int			
 	ft_clamp(
