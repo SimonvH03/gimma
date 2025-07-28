@@ -6,7 +6,7 @@
 /*   By: simon <svan-hoo@student.codam.nl>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/08/27 01:36:33 by simon         #+#    #+#                 */
-/*   Updated: 2025/07/28 13:47:34 by simon         ########   odam.nl         */
+/*   Updated: 2025/07/28 18:04:17 by simon         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,8 @@ void
 	{
 		((uint32_t *)walls->image->pixels)[screen_x
 			+ screen_y * walls->image->width]
-			= texumn_start[(int)(column.tex_y + 0.0005f)];
+			= colour_blend(texumn_start[(int)(column.tex_y + 0.0005f)],
+				0xFF000000, ft_clamp(255 * (ray->distance / VIEW_DISTANCE), 0, 255));
 		column.tex_y += column.step;
 		screen_y++;
 	}

@@ -6,7 +6,7 @@
 /*   By: simon <svan-hoo@student.codam.nl>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/02/23 18:49:26 by svan-hoo      #+#    #+#                 */
-/*   Updated: 2025/07/28 14:24:13 by simon         ########   odam.nl         */
+/*   Updated: 2025/07/28 18:10:07 by simon         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,9 +48,7 @@ void
 
 	i = 0;
 	while (i < image->count)
-	{
 		image->instances[i++].z = depth;
-	}
 }
 
 int

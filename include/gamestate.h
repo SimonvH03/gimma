@@ -6,7 +6,7 @@
 /*   By: simon <svan-hoo@student.codam.nl>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/08/26 23:06:35 by simon         #+#    #+#                 */
-/*   Updated: 2025/04/21 22:47:14 by simon         ########   odam.nl         */
+/*   Updated: 2025/07/28 18:11:51 by simon         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,9 @@ typedef struct s_scalable
 
 // interaction
 # define INTERACTION_RANGE	1.5
+
+// environment
+# define VIEW_DISTANCE		16
 
 enum	e_door_state
 {
@@ -71,6 +74,12 @@ typedef struct s_walls
 	mlx_texture_t		*doorside;
 }	t_walls;
 
+typedef struct s_effects
+{
+	mlx_image_t			*image;
+	bool				flashlight;
+}	t_effects;
+
 typedef struct s_door
 {
 	int16_t				*r_cell;
@@ -91,8 +100,9 @@ typedef struct s_grid
 
 typedef struct s_scene
 {
-	t_walls				walls;
 	t_grid				grid;
+	t_walls				walls;
+	t_effects			effects;
 	uint32_t			floor_clr;
 	uint32_t			ceiling_clr;
 }	t_scene;

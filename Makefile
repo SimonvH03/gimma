@@ -36,6 +36,7 @@ SRC			:=	$(SRCDIR)/main.c \
 				$(SRCDIR)/init/scalable.c \
 				$(SRCDIR)/render/cast_ray.c \
 				$(SRCDIR)/render/draw_texture_column.c \
+				$(SRCDIR)/render/effects.c \
 				$(SRCDIR)/render/raycast.c \
 				$(SRCDIR)/render/update_bigmap.c \
 				$(SRCDIR)/render/update_minimap.c \

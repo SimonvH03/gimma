@@ -6,7 +6,7 @@
 /*   By: simon <svan-hoo@student.codam.nl>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/02/23 18:49:26 by svan-hoo      #+#    #+#                 */
-/*   Updated: 2025/07/28 13:47:34 by simon         ########   odam.nl         */
+/*   Updated: 2025/07/28 14:55:31 by simon         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,18 @@ static int
 	return (RETURN_SUCCESS);
 }
 
+int	full_window_image(
+	mlx_t *mlx,
+	mlx_image_t **dest)
+{
+	*dest = mlx_new_image(mlx, mlx->width, mlx->height);
+	if (*dest == NULL)
+		return (set_error(CUB_MLXFAIL));
+	if (mlx_image_to_window(mlx, *dest, 0, 0) < 0)
+		return (set_error(CUB_MLXFAIL));
+	return (RETURN_SUCCESS);
+}
+
 int
 	init_game(
 		t_window *window,
@@ -96,11 +108,10 @@ int
 		return (RETURN_FAILURE);
 	if (init_player(&window->player, &scene->grid) != RETURN_SUCCESS)
 		return (RETURN_FAILURE);
-	scene->walls.image = mlx_new_image(mlx, mlx->width, mlx->height);
-	if (scene->walls.image == NULL)
-		return (set_error(CUB_MLXFAIL));
-	if (mlx_image_to_window(mlx, scene->walls.image, 0, 0) < 0)
-		return (set_error(CUB_MLXFAIL));
+	if (full_window_image(mlx, &scene->walls.image) != RETURN_SUCCESS)
+		return (RETURN_FAILURE);
+	if (full_window_image(mlx, &scene->effects.image) != RETURN_SUCCESS)
+		return (RETURN_FAILURE);
 	if (init_hud(window, &window->hud) != RETURN_SUCCESS)
 		return (RETURN_FAILURE);
 	return (RETURN_SUCCESS);

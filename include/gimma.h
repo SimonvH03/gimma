@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   cub3d.h                                            :+:    :+:            */
+/*   gimma.h                                            :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: simon <svan-hoo@student.codam.nl>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/08/26 23:06:35 by simon         #+#    #+#                 */
-/*   Updated: 2025/07/28 13:47:57 by simon         ########   odam.nl         */
+/*   Updated: 2025/07/28 18:11:00 by simon         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -283,6 +283,12 @@ void
 	raycast(
 		t_scene *scene,
 		t_camera *camera);
+void
+	effects_shader(
+		mlx_image_t	*image,
+		uint32_t x,
+		uint32_t y,
+		void *param);
 void		
 	update_bigmap(
 		t_bigmap *map);
@@ -305,6 +311,12 @@ mlx_image_t
 int			
 	transpose_texture(
 		mlx_texture_t *texture);
+
+uint32_t
+	colour_blend(
+		uint32_t colour_a,
+		uint32_t colour_b,
+		uint8_t level);
 
 // setters getters of mlx_image_t.enabled bits
 // groups

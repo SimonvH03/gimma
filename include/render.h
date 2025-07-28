@@ -6,7 +6,7 @@
 /*   By: simon <svan-hoo@student.codam.nl>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/08/26 23:06:35 by simon         #+#    #+#                 */
-/*   Updated: 2025/04/21 23:33:42 by simon         ########   odam.nl         */
+/*   Updated: 2025/07/28 16:08:03 by simon         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,18 @@
 
 // ratio of wall height / width
 # define CAMERA_PLANE		1
+
+typedef union u_colour_construct
+{
+	uint32_t	value;
+	struct
+	{
+		uint8_t	a;
+		uint8_t	b;
+		uint8_t	g;
+		uint8_t	r;
+	};
+}	t_colour_construct;
 
 enum	e_hit_axis
 {

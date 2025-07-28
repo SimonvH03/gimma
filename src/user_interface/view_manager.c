@@ -6,7 +6,7 @@
 /*   By: simon <svan-hoo@student.codam.nl>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/01/31 18:33:20 by svan-hoo      #+#    #+#                 */
-/*   Updated: 2025/07/28 13:47:34 by simon         ########   odam.nl         */
+/*   Updated: 2025/07/28 18:10:55 by simon         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ void
 		update_weapon(mlx, &window->player.weapon);
 		update_minimap(&window->hud.minimap);
 		update_bigmap(&window->hud.bigmap);
+		// image_iter(window->scene.walls.image, effects_shader, window);
 	}
 	else if (window->view == wv_menu)
 	{

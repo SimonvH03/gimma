@@ -1,0 +1,50 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   effects.c                                          :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: simon <svan-hoo@student.codam.nl>            +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2025/07/28 14:58:21 by simon         #+#    #+#                 */
+/*   Updated: 2025/07/28 18:11:25 by simon         ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "gimma.h"
+
+uint32_t
+	colour_blend(
+		uint32_t colour_a,
+		uint32_t colour_b,
+		uint8_t level)
+{
+	t_colour_construct	a;
+	t_colour_construct	b;
+	t_colour_construct	result;
+	uint8_t				inverse;
+
+	inverse = 255 - level;
+	a.value = colour_a;
+	b.value = colour_b;
+	result.r = (a.r * inverse + b.r * level) / 255;
+	result.g = (a.g * inverse + b.g * level) / 255;
+	result.b = (a.b * inverse + b.b * level) / 255;
+	result.a = (a.a * inverse + b.a * level) / 255;
+	return (result.value);
+}
+
+// void
+// 	effects_shader(
+// 		mlx_image_t	*image,
+// 		uint32_t x,
+// 		uint32_t y,
+// 		void *param)
+// {
+// 	const t_window	*window = param;
+// 	float			dim_factor;
+
+// 	(void)window;
+// 	((uint32_t *)image->pixels)[y * image->width + x]
+// 		= colour_blend(((uint32_t *)image->pixels)[y * image->width + x],
+// 			0xFF000000, ft_clamp(255 * dim_factor, 0, 255));
+// }
