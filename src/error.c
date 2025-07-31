@@ -6,15 +6,15 @@
 /*   By: simon <svan-hoo@student.codam.nl>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/04/16 17:53:05 by simon         #+#    #+#                 */
-/*   Updated: 2025/07/28 13:47:34 by simon         ########   odam.nl         */
+/*   Updated: 2025/07/31 15:02:26 by simon         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "gimma.h"
 
-int	g_cub_errno = CUB_SUCCESS;
+t_cub_errno	g_cub_errno = CUB_SUCCESS;
 
-static const char	*cub_strerror(mlx_errno_t val)
+static const char	*cub_strerror(t_cub_errno val)
 {
 	const char	*cub_errors[CUB_ERRMAX] = {
 		"No Errors.",
@@ -38,7 +38,7 @@ static const char	*cub_strerror(mlx_errno_t val)
 	return (cub_errors[val]);
 }
 
-int	set_error(const int err_val)
+int	set_error(const t_cub_errno err_val)
 {
 	if (err_val)
 		g_cub_errno = err_val;
